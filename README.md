@@ -60,7 +60,7 @@ The learning happens in two steps:
 
 Crucially, in this step we only updated the CAE weights, and kept the classifier frozen. With this step, we minimised the autoencoder’s reconstruction loss whilst ensuring the CAE codes are uninformative for the batch effect confounder. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\large&space;\lambda>0" title="\large \lambda>0" /> is an hyperparameter to tune, and higher values result in less biased latent representations.
 
-(B) Then we solved:
+(B) Then we solved the following minimax objective:
 
 <p align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\min\limits_{\mathbf{w}}\,\,\,\mathcal{L}_{\textrm{adv}}(\boldsymbol{\theta},&space;\mathbf{w})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;\min\limits_{\mathbf{w}}\,\,\,\mathcal{L}_{\textrm{adv}}(\boldsymbol{\theta},&space;\mathbf{w})" title="\large \min\limits_{\mathbf{w}}\,\,\,\mathcal{L}_{\textrm{adv}}(\boldsymbol{\theta}, \mathbf{w})" /></a></p>
 
